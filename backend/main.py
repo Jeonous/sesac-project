@@ -14,9 +14,14 @@ class ChatInput(BaseModel):
     user_input: Optional[str] = None
 
 
+import os
+
+os.environ["OPENAI_API_KEY"] = "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"
+
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
 client = OpenAI()
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
